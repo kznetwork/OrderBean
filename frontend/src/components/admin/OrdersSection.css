@@ -1,0 +1,141 @@
+.orders-section {
+  background: #ffffff;
+  padding: 24px 32px;
+  margin: 0 0 32px 0;
+}
+
+.orders-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #111827;
+}
+
+.empty-message {
+  text-align: center;
+  color: #6b7280;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.order-card.status-pending {
+  border-left-color: #3b82f6;
+}
+
+.order-card.status-preparing {
+  border-left-color: #f59e0b;
+}
+
+.order-card.status-ready {
+  border-left-color: #10b981;
+}
+
+.order-card.status-completed {
+  border-left-color: #6b7280;
+  opacity: 0.7;
+}
+
+.order-header {
+  margin-bottom: 8px;
+}
+
+.order-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.order-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-item {
+  font-size: 16px;
+  color: #1f2937;
+  margin: 0;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.btn-status {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #ffffff;
+}
+
+.btn-pending {
+  background: #3b82f6;
+}
+
+.btn-pending:hover {
+  background: #2563eb;
+}
+
+.btn-preparing {
+  background: #f59e0b;
+}
+
+.btn-preparing:hover {
+  background: #d97706;
+}
+
+.btn-ready {
+  background: #10b981;
+}
+
+.btn-ready:hover {
+  background: #059669;
+}
+
+.btn-status:active {
+  transform: scale(0.95);
+}
+
+.btn-status:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+

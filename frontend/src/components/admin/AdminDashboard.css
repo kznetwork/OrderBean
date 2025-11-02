@@ -1,0 +1,32 @@
+.admin-dashboard {
+  background: #f0f9ff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 32px;
+}
+
+.dashboard-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #111827;
+}
+
+.dashboard-stats {
+  display: flex;
+  align-items: center;
+}
+
+.stats-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #374151;
+}
+
+.stats-text strong {
+  font-weight: 700;
+  color: #1f2937;
+}
+

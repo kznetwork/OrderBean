@@ -1,0 +1,49 @@
+.admin-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+}
+
+.admin-header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-tab {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 6px;
+}
+
+.nav-tab:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.nav-tab.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+

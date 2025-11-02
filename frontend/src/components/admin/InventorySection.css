@@ -1,0 +1,123 @@
+.inventory-section {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 32px 24px 32px;
+}
+
+.inventory-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #111827;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.inventory-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.inventory-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-card.low-stock {
+  border-color: #f59e0b;
+  background: #fef3c7;
+}
+
+.inventory-card.out-of-stock {
+  border-color: #ef4444;
+  background: #fee2e2;
+}
+
+.menu-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #111827;
+}
+
+.quantity-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.quantity {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.status {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.status-정상 {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-주의 {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-품절 {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-control {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #374151;
+}
+
+.btn-control:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.btn-control:active {
+  transform: scale(0.95);
+}
+
+.btn-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
