@@ -75,3 +75,4 @@ export const MenuCard: React.FC<MenuCardProps> = ({ menu, onAddToCart }) => {
   );
 };
 
+

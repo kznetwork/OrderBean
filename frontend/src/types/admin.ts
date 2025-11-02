@@ -33,3 +33,4 @@ export interface InventoryItem {
 
 export type InventoryStatus = '정상' | '주의' | '품절';
 
+
