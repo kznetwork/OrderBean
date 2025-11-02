@@ -1,0 +1,19 @@
+# Database Configuration
+DATABASE_URL=postgresql+asyncpg://user:password@localhost:5432/orderbean
+
+# JWT Configuration
+SECRET_KEY=your-secret-key-here-please-change-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# CORS Configuration
+ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000
+
+# Environment
+ENVIRONMENT=development
+DEBUG=True
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=8000
+
