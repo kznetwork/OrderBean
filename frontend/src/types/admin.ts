@@ -1,4 +1,4 @@
-export type OrderStatus = 'pending' | 'preparing' | 'ready' | 'completed' | 'cancelled';
+export type OrderStatus = 'received' | 'preparing' | 'completed' | 'cancelled';
 
 export interface OrderItem {
   menuName: string;
@@ -32,4 +32,5 @@ export interface InventoryItem {
 }
 
 export type InventoryStatus = '정상' | '주의' | '품절';
+
 

@@ -13,18 +13,39 @@
 
 .menu-image {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background: #f3f4f6;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
 }
 
 .image-placeholder {
   color: #9ca3af;
   font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-placeholder.hidden {
+  display: none;
 }
 
 .menu-info {
@@ -94,4 +115,5 @@
 .add-to-cart-button:active {
   transform: scale(0.98);
 }
+
 

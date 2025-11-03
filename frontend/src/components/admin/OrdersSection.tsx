@@ -1,9 +1,25 @@
-import { Order, OrderStatus } from '../../types/admin';
+import { OrderStatus } from '../../types/admin';
 import './OrdersSection.css';
+
+interface OrderItem {
+  menuName: string;
+  quantity: number;
+}
+
+interface Order {
+  id: string;
+  orderId: number;
+  orderNumber: string;
+  customerName: string;
+  status: OrderStatus;
+  items: OrderItem[];
+  totalAmount: number;
+  createdAt: string;
+}
 
 interface OrdersSectionProps {
   orders: Order[];
-  onUpdateStatus: (orderId: number, newStatus: OrderStatus) => void;
+  onUpdateStatus: (orderId: string, newStatus: OrderStatus) => void;
 }
 
 const formatDateTime = (dateString: string): string => {
@@ -21,12 +37,14 @@ const formatPrice = (price: number): string => {
 
 const getStatusButton = (status: OrderStatus) => {
   switch (status) {
-    case 'pending':
-      return { text: '주문 접수', nextStatus: 'preparing' as OrderStatus };
+    case 'received':
+      return { text: '제조 시작', nextStatus: 'preparing' as OrderStatus };
     case 'preparing':
-      return { text: '제조 완료', nextStatus: 'ready' as OrderStatus };
-    case 'ready':
-      return { text: '픽업 완료', nextStatus: 'completed' as OrderStatus };
+      return { text: '제조 완료', nextStatus: 'completed' as OrderStatus };
+    case 'completed':
+      return null; // 완료된 주문은 버튼 없음
+    case 'cancelled':
+      return null; // 취소된 주문은 버튼 없음
     default:
       return null;
   }
@@ -56,7 +74,7 @@ export const OrdersSection = ({ orders, onUpdateStatus }: OrdersSectionProps) =>
                     ))}
                   </div>
                   <div className="order-footer">
-                    <span className="order-price">{formatPrice(order.totalPrice)}</span>
+                    <span className="order-price">{formatPrice(order.totalAmount)}</span>
                     {statusButton && (
                       <button
                         className={`btn-status btn-${order.status}`}
@@ -75,4 +93,5 @@ export const OrdersSection = ({ orders, onUpdateStatus }: OrdersSectionProps) =>
     </section>
   );
 };
+
 

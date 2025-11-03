@@ -24,3 +24,4 @@ export interface CartItem {
   totalPrice: number;
 }
 
+

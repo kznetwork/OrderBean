@@ -46,7 +46,20 @@ export const MenuCard: React.FC<MenuCardProps> = ({ menu, onAddToCart }) => {
   return (
     <div className="menu-card">
       <div className="menu-image">
-        <div className="image-placeholder">이미지</div>
+        {menu.imageUrl ? (
+          <img 
+            src={menu.imageUrl} 
+            alt={menu.name}
+            onError={(e) => {
+              // 이미지 로드 실패 시 플레이스홀더 표시
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+        ) : null}
+        <div className={`image-placeholder ${menu.imageUrl ? 'hidden' : ''}`}>
+          {menu.imageUrl ? '이미지 없음' : '이미지'}
+        </div>
       </div>
       
       <div className="menu-info">
@@ -74,4 +87,5 @@ export const MenuCard: React.FC<MenuCardProps> = ({ menu, onAddToCart }) => {
     </div>
   );
 };
+
 
